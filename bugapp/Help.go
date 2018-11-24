@@ -230,6 +230,17 @@ Valid options are:
                            the supplied tags
 
 `)
+	case "import":
+		fmt.Printf("Usage: " + os.Args[0] + " import [options]\n\n")
+		fmt.Printf(
+			`This will import bugs from other systems.
+
+Valid options are:
+    --github user/repo   Import from network. A repo is required.
+    --be                 Import from current directory.
+                         Must have a BugsEverywhere system.
+
+`)
 	case "id", "identifier":
 		fmt.Printf("Usage: " + os.Args[0] + " identifier BugID [--generate] [value]\n\n")
 		fmt.Printf(
@@ -319,6 +330,7 @@ identifiers in the system before giving up.
 		fmt.Printf("\tenv\t Show settings that bug will use if invoked from this directory\n")
 		fmt.Printf("\tpwd\t Prints the issues directory to stdout (useful subcommand in the shell)\n")
 		fmt.Printf("\troadmap\t Print list of open issues sorted by milestone\n")
+		fmt.Printf("\timport\t Import issues from github or BugsEverywhere\n")
 		fmt.Printf("\tversion\t Print the version of this software\n")
 		fmt.Printf("\thelp\t Show this screen\n")
 	}

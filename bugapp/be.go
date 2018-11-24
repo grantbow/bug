@@ -1,4 +1,4 @@
-package main
+package bugapp
 
 import (
 	"encoding/json"

@@ -74,6 +74,8 @@ func main() {
 			bugapp.Roadmap(os.Args[2:])
 		case "find":
 			bugapp.Find(os.Args[2:])
+		case "import":
+			bugapp.Import(os.Args[2:])
 		case "help":
 			fallthrough
 		default:
